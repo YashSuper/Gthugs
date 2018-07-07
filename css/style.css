@@ -540,18 +540,24 @@ text-align:center;
 }
 /*-- //gallery --*/
 /*-- Team Members-- */
-.team {
-    background: url(../images/t1.jpg)no-repeat center;
+@media (max-width:599px)
+{
+  .team{
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(../images/t1.jpg)no-repeat center;
+    background-size: cover;
+  }
+}
+@media (min-width:600px)
+{.team {
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),url(../images/t1.jpg)no-repeat center;
     background-size: 100%;
-    filter: blur(0);
     transform: scale(1);
-    transition: all .5s ease;
+    transition: all 1s ease;
 }
 .team:hover
 {
-  filter: blur(.2);
-  background-size: 105%;
-}
+  background-size: 104%;
+}}
 .team-members {
     width: 100%;
     overflow: hidden;
@@ -964,9 +970,15 @@ h1 a.navbar-brand {
 .callbacks_tabs {
     top: 41%;
 }
-.w3-services-clr {
     padding: 2em 1em;
+    .w3-services-clr {
+    transition: all .5s ease;
 	}
+
+  .w3-services-clr:hover
+  {
+    transform: scale(1.05);
+  }
 	.its-banner-grid h4 {
     letter-spacing: 0.2px;
 	  font-size: 20px;
