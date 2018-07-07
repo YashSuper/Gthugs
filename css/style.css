@@ -542,7 +542,15 @@ text-align:center;
 /*-- Team Members-- */
 .team {
     background: url(../images/t1.jpg)no-repeat center;
-    background-size: cover;
+    background-size: 100%;
+    filter: blur(0);
+    transform: scale(1);
+    transition: all .5s ease;
+}
+.team:hover
+{
+  filter: blur(.2);
+  background-size: 105%;
 }
 .team-members {
     width: 100%;
